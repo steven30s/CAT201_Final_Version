@@ -13,7 +13,6 @@
 <header>
     <%@include file="header.jsp"%>
 </header>
-
 <main class="cart-container">
     <h1>Shopping Cart</h1>
 
@@ -29,30 +28,32 @@
         <c:forEach items="${cart}" var="item">
             <div class="cart-item">
                 <div class="product-info">
-                    <input type="checkbox" name="cartItem" value="${item.id}">
-                    <a href="${pageContext.request.contextPath}/products/${item.productId}">
-                        <img src="/images/${item.product.productImage}" alt="${item.product.productName}"
-                             class="product-image">
+                    <input type="checkbox" name="cartItem" value="${item.id}" aria-label="Select ${item.product.productName}">
+                    <a href="${pageContext.request.contextPath}/products/${item.productId}" class="product-link">
+                        <img src="/images/${item.product.productImage}" 
+                             alt="${item.product.productName}" 
+                             class="product-image" loading="lazy">
                         <span class="product-name">${item.product.productName}</span>
                     </a>
                 </div>
 
-                <div class="price">$${item.product.productPrice}</div>
+                <div class="price" aria-label="Price">$${item.product.productPrice}</div>
 
                 <div class="quantity-controls">
-                    <button class="decrease">-</button>
-                    <span class="quantity" data-cart-id="${item.id}">${item.cartNum}</span>
-                    <button class="increase">+</button>
+                    <button class="decrease" aria-label="Decrease quantity of ${item.product.productName}">-</button>
+                    <span class="quantity" data-cart-id="${item.id}" aria-live="polite">${item.cartNum}</span>
+                    <button class="increase" aria-label="Increase quantity of ${item.product.productName}">+</button>
                 </div>
 
-                <div class="total">$${item.product.productPrice * item.cartNum}</div>
+                <div class="total" aria-label="Total for ${item.product.productName}">$${item.product.productPrice * item.cartNum}</div>
 
                 <div class="actions">
-                    <button class="delete-item" data-cart-id="${item.id}">Remove</button>
+                    <button class="delete-item" data-cart-id="${item.id}" aria-label="Remove ${item.product.productName}">
+                        Remove
+                    </button>
                 </div>
             </div>
         </c:forEach>
-
         <c:if test="${empty cart}">
             <div class="empty-cart">
                 <p>Your cart is empty</p>
