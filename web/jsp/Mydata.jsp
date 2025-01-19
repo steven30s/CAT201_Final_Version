@@ -31,18 +31,18 @@
     </div>
 </div>
 <div class="float-nav">
-    <a href="${pageContext.request.contextPath}/jsp/IndexServlet?action=findcart" class="nav-item">
-        <img src="${pageContext.request.contextPath}/img/cart-icon.png" alt="Cart">
+    <a href="${pageContext.request.contextPath}/jsp/IndexServlet?action=findcart" class="nav-item" aria-label="View Cart">
+        <img src="${pageContext.request.contextPath}/img/cart-icon.png" alt="Cart Icon">
         <span>Cart</span>
     </a>
 
-    <a href="${pageContext.request.contextPath}/jsp/IndexServlet?action=mydata" class="nav-item">
-        <img src="${pageContext.request.contextPath}/img/profile-icon.png" alt="Profile">
+    <a href="${pageContext.request.contextPath}/jsp/IndexServlet?action=mydata" class="nav-item" aria-label="View Profile">
+        <img src="${pageContext.request.contextPath}/img/profile-icon.png" alt="Profile Icon">
         <span>Profile</span>
     </a>
 
-    <button class="nav-item back-to-top" id="backToTop">
-        <img src="${pageContext.request.contextPath}/img/arrow-up-icon.png" alt="Top">
+    <button class="nav-item back-to-top" id="backToTop" aria-label="Back to Top">
+        <img src="${pageContext.request.contextPath}/img/arrow-up-icon.png" alt="Arrow Up Icon">
         <span>Top</span>
     </button>
 </div>
