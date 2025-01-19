@@ -1,8 +1,8 @@
 /*imglist*/
 .imgList1 a.banner {
     display: block;
-    width: 100%;
-    margin-bottom: 40px;
+    width: 120%;
+    margin-bottom: 60px;
 }
 
 .imgList1 img {
@@ -19,7 +19,7 @@
 }
 
 .imgList1 ul li dl dd {
-    text-indent: 10px;
+    text-indent: 15px;
     margin-top: 20px;
     font-size: 14px;
 }
@@ -51,7 +51,7 @@
 }
 
 .imgList1 ul li a:hover dl dt {
-    transform: rotateY(180deg);
+    transform: rotateY(170deg);
 }
 
 .imgList1 h2 {
@@ -61,5 +61,5 @@
 
 .imgList1 h2 img {
     display: block;
-    width: 100%;
+    width: 110%;
 }
